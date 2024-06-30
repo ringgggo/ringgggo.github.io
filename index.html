@@ -1,0 +1,678 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Yuma’s Homepage</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="c1741e01-27f1-4a85-921c-138218705d6b" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/met_frederic_edwin_church_1871.jpg" style="object-position:center 30.000000000000004%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">🍎</span></div><h1 class="page-title">Yuma’s Homepage</h1><p class="page-description"></p></header><div class="page-body"><nav id="7c6b713e-477c-478c-b43d-0d89418c9aff" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#ebd9abb4-62ca-4781-b9ec-1265c2d0d707"> 10 私について / About Me</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#b32c5ea6-763b-4d89-97fb-96a2face7928"> 11 河内 悠眞 / Kawachi Yuma</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#a0e8eeef-1de4-4e06-9f71-5a742643f986">Contacts</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#644779a3-865d-4129-9501-52d0b063b125">Now</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#81e49d9d-3362-4114-91b1-24b0fab6cef8">Past</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#480c2f94-2531-4ad7-9794-9c86fc5e1c7e"> 12 研究分野 / Research</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#f143925e-6878-47df-ba2c-ee4c7bb8da64"> 13 興味のある分野 / Field of Interest</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#71631bb1-a229-45fa-82a9-b117490fb0e5"> 14 学会・口頭発表 / Conferences &amp; Oral Presentations</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#29b25b57-9b5d-4493-9b8c-29ad7a856fef"> 20 作ったもの / Text</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#7551dcaf-6d7d-4c93-9f14-3729d690232e"> 30 有償依頼 / For compensation</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#8ac8839a-b045-4c51-97de-b2112cbade48"> 40 過去に担当した講義 / Lectures</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#6dc0ee88-f4f9-4924-842d-7cf6a76e588d"> 2024 - current</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#719c6527-882a-4f61-a881-a0c9bebd423c"> 2023</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#bcb1876f-20b7-4341-89e0-3b2504f92799"> 2022 (summer)</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#48b5e4d9-9dbe-46e7-bd13-7c7a1df882c1"> 2021 (spring)</a></div></nav><h1 id="ebd9abb4-62ca-4781-b9ec-1265c2d0d707" class="block-color-orange_background"> 10 私について / About Me</h1><h2 id="b32c5ea6-763b-4d89-97fb-96a2face7928" class="block-color-yellow_background"> 11 河内 悠眞 / Kawachi Yuma</h2><h3 id="a0e8eeef-1de4-4e06-9f71-5a742643f986" class="">Contacts</h3><ul id="be171d43-3924-402b-a6b0-66efb78ef9a4" class="bulleted-list"><li style="list-style-type:disc">Email: yuma.kawachi.phys[at]gmail.com</li></ul><h3 id="644779a3-865d-4129-9501-52d0b063b125" class="">Now</h3><ul id="d98082c0-6a32-4d6d-8ee7-f83a41ed56f8" class="bulleted-list"><li style="list-style-type:disc">東京工業高等専門学校 電子工学科5年生<br/>5th grade, Department of Electronic Engineering, National Institute of Technology, Tokyo College, NITTC.<br/></li></ul><ul id="ceff31cb-66dd-4b48-8d1f-4eacabd73e77" class="bulleted-list"><li style="list-style-type:disc">姜研究室(Kang Lab.)所属</li></ul><ul id="46fdc88f-f2e7-4556-85fb-d7ada5d9be37" class="bulleted-list"><li style="list-style-type:disc">情報処理学会会員（ジュニア会員）(Sep.2023 - current)<br/>Member of Information Processing Society of Japan, IPSJ.<br/></li></ul><ul id="4d8d3701-3ba8-41b9-af85-bf72725c64db" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-default">正学級委員 5年目 (Apr.2020 - Mar.2025)</mark></li></ul><ul id="78e16326-6b1b-474f-8b7b-9dee4985333e" class="bulleted-list"><li style="list-style-type:disc">フリーランス家庭教師 (Nov.2023 - current)<br/>Freelance Tutor for students<br/></li></ul><h3 id="81e49d9d-3362-4114-91b1-24b0fab6cef8" class="">Past</h3><ul id="4ed02f25-2ac7-443c-a470-269cf3127f89" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-default">久留米工業高等専門学校 特別聴講生 (Apr.2023 - Mar.2024)<br/>Special Student, National Institute of Technology, Kurume College, NITKC.<br/></mark></li></ul><ul id="4f6bbc72-a564-49f0-8802-ac0f0bdbb419" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-default">ウェルネスセンター ピアサポーター(理系) 1年半 (Jan.2022 - Oct.2023)<br/>Peer Supporter at the Wellness Centre.<br/></mark></li></ul><ul id="faf670b5-617c-40cf-afa1-231e11abe5e0" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-default">北陸先端科学技術大学院大学 先端科学技術研究科 前園研究室 特別学修生 (Jul.2023 - Aug.2023)<br/>Special Student, Maezono Lab., School of Science, Japan Advanced Institute of Science and Technology, JAIST.<br/></mark></li></ul><h2 id="480c2f94-2531-4ad7-9794-9c86fc5e1c7e" class="block-color-yellow_background"> 12 研究分野 / Research</h2><figure id="74125dcb-40bb-4e30-8618-955ce98037e4" class="link-to-page"><a href="Yuma%E2%80%99s%20Homepage%20c1741e0127f14a85921c138218705d6b/%E5%AF%86%E5%BA%A6%E6%B1%8E%E5%87%BD%E6%95%B0%E6%B3%95%E3%81%AB%E3%82%88%E3%82%8B%E7%AC%AC%E4%B8%80%E5%8E%9F%E7%90%86%E9%9B%BB%E5%AD%90%E7%8A%B6%E6%85%8B%E8%A8%88%E7%AE%97%2074125dcb40bb4e308618955ce98037e4.html">密度汎函数法による第一原理電子状態計算</a></figure><ul id="ee493a43-807a-485d-ba4f-ac4cef1ece3a" class="bulleted-list"><li style="list-style-type:disc">初学者および非化学系向けの第一原理計算実務補助サービスの開発</li></ul><ul id="22fcf2b9-95f7-459b-9969-cf7c09107850" class="bulleted-list"><li style="list-style-type:disc">グラフ理論の応用的側面の研究</li></ul><ul id="cd4eb88c-a04e-4f77-90ad-41ca7518c644" class="bulleted-list"><li style="list-style-type:disc">高専生に対する数学、工学教育</li></ul><h2 id="f143925e-6878-47df-ba2c-ee4c7bb8da64" class="block-color-yellow_background"> 13 興味のある分野 / Field of Interest</h2><ul id="e2cd98b7-2f96-47ce-9a36-0db28a04dbcf" class="bulleted-list"><li style="list-style-type:disc">理論物理学・計算物理学 / Theoretical and Computational Physics</li></ul><ul id="ef0811f2-9fce-425b-9fbd-ab623362278b" class="bulleted-list"><li style="list-style-type:disc">第一原理計算を基盤とするマテリアルズ・インフォマティクス / Materials Informatics with Ab initio Calculations</li></ul><ul id="c6783a8f-0a53-4df3-ae08-78fcc41c1750" class="bulleted-list"><li style="list-style-type:disc">物性理論 / Condensed Matter Physics</li></ul><ul id="0a8fd770-c1cf-4b5e-8562-56b572bddb20" class="bulleted-list"><li style="list-style-type:disc">工学教育 / Engineering Education</li></ul><ul id="d074edaf-1174-4fe9-8d06-200906c28ba6" class="bulleted-list"><li style="list-style-type:disc">抽象数学理論による工学分野の応用的解析 / Applied Analysis of Engineering using Pure Mathematical Theory</li></ul><ul id="75998528-8cf3-4887-bfde-fc3543ff810d" class="bulleted-list"><li style="list-style-type:disc">UNIX, LaTeXの使用 / Using UNIX and LaTeX</li></ul><ul id="c3015515-ed00-4de4-b162-e8978f1867b3" class="bulleted-list"><li style="list-style-type:disc">Mac OSの活用方法 / Using Mac OS</li></ul><h2 id="71631bb1-a229-45fa-82a9-b117490fb0e5" class="block-color-yellow_background"> 14 学会・口頭発表 / Conferences &amp; Oral Presentations</h2><p id="27713714-7e45-48a7-8f4a-6865f1927585" class="">02_応用物理学会春季学術講演会 in 東京都市大世田谷キャンパス (聴講/高専生特別招待)</p><figure id="b82f09be-7b21-4147-94cd-68566b73511c" class="link-to-page"><a href="Yuma%E2%80%99s%20Homepage%20c1741e0127f14a85921c138218705d6b/01_%E3%82%AF%E3%82%99%E3%83%A9%E3%83%95%E7%90%86%E8%AB%96%E3%81%AE%E5%BF%9C%E7%94%A8%E7%9A%84%E5%81%B4%E9%9D%A2%E3%81%AE%E6%A4%9C%E8%A8%8E%20%E9%AB%98%E5%B0%82%E3%82%B7%E3%83%B3%E3%83%9B%E3%82%9A%20in%20Nagaoka%20b82f09be7b21414794cd68566b73511c.html">01_グラフ理論の応用的側面の検討/高専シンポ in Nagaoka</a></figure><h1 id="29b25b57-9b5d-4493-9b8c-29ad7a856fef" class="block-color-orange_background"> 20 作ったもの / Text</h1><div id="b981c4fb-b3bd-4b60-8d4d-1e9d2bb6c856" class="collection-content"><h4 class="collection-title">作ったもの</h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesTitle"><path d="M0.637695 13.1914C1.0957 13.1914 1.32812 13 1.47852 12.5215L2.24414 10.3887H6.14746L6.90625 12.5215C7.05664 13 7.2959 13.1914 7.74707 13.1914C8.22559 13.1914 8.5332 12.9043 8.5332 12.4531C8.5332 12.2891 8.50586 12.1523 8.44434 11.9678L5.41602 3.79199C5.2041 3.21777 4.82129 2.9375 4.19922 2.9375C3.60449 2.9375 3.21484 3.21777 3.0166 3.78516L-0.0322266 12.002C-0.09375 12.1797 -0.121094 12.3232 -0.121094 12.4668C-0.121094 12.918 0.166016 13.1914 0.637695 13.1914ZM2.63379 9.12402L4.17871 4.68066H4.21973L5.76465 9.12402H2.63379ZM12.2793 13.2324C13.3115 13.2324 14.2891 12.6787 14.7129 11.8037H14.7402V12.5762C14.7471 12.9863 15.0273 13.2393 15.4238 13.2393C15.834 13.2393 16.1143 12.9795 16.1143 12.5215V8.00977C16.1143 6.49902 14.9658 5.52148 13.1543 5.52148C11.7666 5.52148 10.6592 6.08887 10.2695 6.99121C10.1943 7.15527 10.1533 7.3125 10.1533 7.46289C10.1533 7.81152 10.4062 8.04395 10.7686 8.04395C11.0215 8.04395 11.2129 7.94824 11.3496 7.73633C11.7529 6.99121 12.2861 6.65625 13.1064 6.65625C14.0977 6.65625 14.6992 7.20996 14.6992 8.1123V8.67285L12.5664 8.7959C10.7686 8.8916 9.77734 9.69824 9.77734 11.0107C9.77734 12.3369 10.8096 13.2324 12.2793 13.2324ZM12.6621 12.1387C11.8008 12.1387 11.2129 11.667 11.2129 10.9561C11.2129 10.2725 11.7598 9.82129 12.7578 9.75977L14.6992 9.62988V10.3203C14.6992 11.3457 13.7969 12.1387 12.6621 12.1387Z"></path></svg></span>Name</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesCreatedAt"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM4.54102 8.91211H7.99316C8.30078 8.91211 8.54004 8.67285 8.54004 8.37207V3.8877C8.54004 3.58691 8.30078 3.34766 7.99316 3.34766C7.69238 3.34766 7.45312 3.58691 7.45312 3.8877V7.83203H4.54102C4.2334 7.83203 4.00098 8.06445 4.00098 8.37207C4.00098 8.67285 4.2334 8.91211 4.54102 8.91211Z"></path></svg></span>Created</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesText"><path d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path></svg></span>English Title</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesNumber"><path d="M2.4834 10.9902H4.33594L3.75488 13.8887C3.74121 13.9639 3.72754 14.0664 3.72754 14.1416C3.72754 14.5381 3.99414 14.7637 4.39746 14.7637C4.81445 14.7637 5.09473 14.5449 5.18359 14.1143L5.80566 10.9902H8.79297L8.21191 13.8887C8.19824 13.9639 8.18457 14.0664 8.18457 14.1416C8.18457 14.5381 8.45117 14.7637 8.85449 14.7637C9.27148 14.7637 9.55176 14.5449 9.63379 14.1143L10.2627 10.9902H12.4502C12.9287 10.9902 13.2432 10.6758 13.2432 10.2109C13.2432 9.8418 12.9902 9.56836 12.6006 9.56836H10.5498L11.2129 6.28711H13.3662C13.8379 6.28711 14.1523 5.96582 14.1523 5.50098C14.1523 5.13184 13.9062 4.8584 13.5098 4.8584H11.5L12.0195 2.27441C12.0264 2.21973 12.0469 2.11035 12.0469 2.01465C12.0469 1.625 11.7666 1.39258 11.3633 1.39258C10.9053 1.39258 10.6797 1.63867 10.5977 2.05566L10.0303 4.8584H7.04297L7.5625 2.27441C7.57617 2.21973 7.58984 2.11035 7.58984 2.01465C7.58984 1.625 7.30957 1.39258 6.91309 1.39258C6.44824 1.39258 6.21582 1.63867 6.13379 2.05566L5.57324 4.8584H3.54297C3.06445 4.8584 2.75 5.18652 2.75 5.65137C2.75 6.03418 3.00293 6.28711 3.39258 6.28711H5.28613L4.62305 9.56836H2.63379C2.15527 9.56836 1.84082 9.89648 1.84082 10.3613C1.84082 10.7373 2.09375 10.9902 2.4834 10.9902ZM6.09277 9.56836L6.75586 6.28711H9.74316L9.08008 9.56836H6.09277Z"></path></svg></span>Page</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesStatus"><path d="M8.75488 1.02344C8.75488 0.613281 8.41309 0.264648 8.00293 0.264648C7.59277 0.264648 7.25098 0.613281 7.25098 1.02344V3.11523C7.25098 3.51855 7.59277 3.86719 8.00293 3.86719C8.41309 3.86719 8.75488 3.51855 8.75488 3.11523V1.02344ZM3.91504 5.0293C4.20215 5.31641 4.69434 5.32324 4.97461 5.03613C5.26855 4.74902 5.26855 4.25684 4.98145 3.96973L3.53906 2.52051C3.25195 2.2334 2.7666 2.21973 2.47949 2.50684C2.19238 2.79395 2.18555 3.28613 2.47266 3.57324L3.91504 5.0293ZM10.9629 4.01758C10.6826 4.30469 10.6826 4.79688 10.9697 5.08398C11.2568 5.37109 11.749 5.36426 12.0361 5.07715L13.4854 3.62793C13.7725 3.34082 13.7725 2.84863 13.4785 2.55469C13.1982 2.27441 12.7061 2.27441 12.4189 2.56152L10.9629 4.01758ZM15.0234 8.78906C15.4336 8.78906 15.7822 8.44727 15.7822 8.03711C15.7822 7.62695 15.4336 7.28516 15.0234 7.28516H12.9385C12.5283 7.28516 12.1797 7.62695 12.1797 8.03711C12.1797 8.44727 12.5283 8.78906 12.9385 8.78906H15.0234ZM0.975586 7.28516C0.56543 7.28516 0.223633 7.62695 0.223633 8.03711C0.223633 8.44727 0.56543 8.78906 0.975586 8.78906H3.07422C3.48438 8.78906 3.83301 8.44727 3.83301 8.03711C3.83301 7.62695 3.48438 7.28516 3.07422 7.28516H0.975586ZM12.0361 10.9902C11.749 10.71 11.2568 10.71 10.9629 10.9971C10.6826 11.2842 10.6826 11.7764 10.9697 12.0635L12.4258 13.5127C12.7129 13.7998 13.2051 13.793 13.4922 13.5059C13.7793 13.2256 13.7725 12.7266 13.4854 12.4395L12.0361 10.9902ZM2.52051 12.4395C2.22656 12.7266 2.22656 13.2188 2.50684 13.5059C2.79395 13.793 3.28613 13.7998 3.57324 13.5127L5.02246 12.0703C5.31641 11.7832 5.31641 11.291 5.03613 11.0039C4.74902 10.7168 4.25684 10.71 3.96973 10.9971L2.52051 12.4395ZM8.75488 12.9658C8.75488 12.5557 8.41309 12.207 8.00293 12.207C7.59277 12.207 7.25098 12.5557 7.25098 12.9658V15.0576C7.25098 15.4609 7.59277 15.8096 8.00293 15.8096C8.41309 15.8096 8.75488 15.4609 8.75488 15.0576V12.9658Z"></path></svg></span>Status</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesMultipleSelect"><path d="M1.91602 4.83789C2.44238 4.83789 2.87305 4.40723 2.87305 3.87402C2.87305 3.34766 2.44238 2.91699 1.91602 2.91699C1.38281 2.91699 0.952148 3.34766 0.952148 3.87402C0.952148 4.40723 1.38281 4.83789 1.91602 4.83789ZM5.1084 4.52344H14.3984C14.7607 4.52344 15.0479 4.23633 15.0479 3.87402C15.0479 3.51172 14.7607 3.22461 14.3984 3.22461H5.1084C4.74609 3.22461 4.45898 3.51172 4.45898 3.87402C4.45898 4.23633 4.74609 4.52344 5.1084 4.52344ZM1.91602 9.03516C2.44238 9.03516 2.87305 8.60449 2.87305 8.07129C2.87305 7.54492 2.44238 7.11426 1.91602 7.11426C1.38281 7.11426 0.952148 7.54492 0.952148 8.07129C0.952148 8.60449 1.38281 9.03516 1.91602 9.03516ZM5.1084 8.7207H14.3984C14.7607 8.7207 15.0479 8.43359 15.0479 8.07129C15.0479 7.70898 14.7607 7.42188 14.3984 7.42188H5.1084C4.74609 7.42188 4.45898 7.70898 4.45898 8.07129C4.45898 8.43359 4.74609 8.7207 5.1084 8.7207ZM1.91602 13.2324C2.44238 13.2324 2.87305 12.8018 2.87305 12.2686C2.87305 11.7422 2.44238 11.3115 1.91602 11.3115C1.38281 11.3115 0.952148 11.7422 0.952148 12.2686C0.952148 12.8018 1.38281 13.2324 1.91602 13.2324ZM5.1084 12.918H14.3984C14.7607 12.918 15.0479 12.6309 15.0479 12.2686C15.0479 11.9062 14.7607 11.6191 14.3984 11.6191H5.1084C4.74609 11.6191 4.45898 11.9062 4.45898 12.2686C4.45898 12.6309 4.74609 12.918 5.1084 12.918Z"></path></svg></span>Tags</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesDate"><path d="M3.29688 14.4561H12.7031C14.1797 14.4561 14.9453 13.6904 14.9453 12.2344V3.91504C14.9453 2.45215 14.1797 1.69336 12.7031 1.69336H3.29688C1.82031 1.69336 1.05469 2.45215 1.05469 3.91504V12.2344C1.05469 13.6973 1.82031 14.4561 3.29688 14.4561ZM3.27637 13.1162C2.70898 13.1162 2.39453 12.8154 2.39453 12.2207V5.9043C2.39453 5.30273 2.70898 5.00879 3.27637 5.00879H12.71C13.2842 5.00879 13.6055 5.30273 13.6055 5.9043V12.2207C13.6055 12.8154 13.2842 13.1162 12.71 13.1162H3.27637ZM6.68066 7.38086H7.08398C7.33008 7.38086 7.41211 7.30566 7.41211 7.05957V6.66309C7.41211 6.41699 7.33008 6.3418 7.08398 6.3418H6.68066C6.44141 6.3418 6.35938 6.41699 6.35938 6.66309V7.05957C6.35938 7.30566 6.44141 7.38086 6.68066 7.38086ZM8.92285 7.38086H9.31934C9.56543 7.38086 9.64746 7.30566 9.64746 7.05957V6.66309C9.64746 6.41699 9.56543 6.3418 9.31934 6.3418H8.92285C8.67676 6.3418 8.59473 6.41699 8.59473 6.66309V7.05957C8.59473 7.30566 8.67676 7.38086 8.92285 7.38086ZM11.1582 7.38086H11.5547C11.8008 7.38086 11.8828 7.30566 11.8828 7.05957V6.66309C11.8828 6.41699 11.8008 6.3418 11.5547 6.3418H11.1582C10.9121 6.3418 10.8301 6.41699 10.8301 6.66309V7.05957C10.8301 7.30566 10.9121 7.38086 11.1582 7.38086ZM4.44531 9.58203H4.84863C5.09473 9.58203 5.17676 9.50684 5.17676 9.26074V8.86426C5.17676 8.61816 5.09473 8.54297 4.84863 8.54297H4.44531C4.20605 8.54297 4.12402 8.61816 4.12402 8.86426V9.26074C4.12402 9.50684 4.20605 9.58203 4.44531 9.58203ZM6.68066 9.58203H7.08398C7.33008 9.58203 7.41211 9.50684 7.41211 9.26074V8.86426C7.41211 8.61816 7.33008 8.54297 7.08398 8.54297H6.68066C6.44141 8.54297 6.35938 8.61816 6.35938 8.86426V9.26074C6.35938 9.50684 6.44141 9.58203 6.68066 9.58203ZM8.92285 9.58203H9.31934C9.56543 9.58203 9.64746 9.50684 9.64746 9.26074V8.86426C9.64746 8.61816 9.56543 8.54297 9.31934 8.54297H8.92285C8.67676 8.54297 8.59473 8.61816 8.59473 8.86426V9.26074C8.59473 9.50684 8.67676 9.58203 8.92285 9.58203ZM11.1582 9.58203H11.5547C11.8008 9.58203 11.8828 9.50684 11.8828 9.26074V8.86426C11.8828 8.61816 11.8008 8.54297 11.5547 8.54297H11.1582C10.9121 8.54297 10.8301 8.61816 10.8301 8.86426V9.26074C10.8301 9.50684 10.9121 9.58203 11.1582 9.58203ZM4.44531 11.7832H4.84863C5.09473 11.7832 5.17676 11.708 5.17676 11.4619V11.0654C5.17676 10.8193 5.09473 10.7441 4.84863 10.7441H4.44531C4.20605 10.7441 4.12402 10.8193 4.12402 11.0654V11.4619C4.12402 11.708 4.20605 11.7832 4.44531 11.7832ZM6.68066 11.7832H7.08398C7.33008 11.7832 7.41211 11.708 7.41211 11.4619V11.0654C7.41211 10.8193 7.33008 10.7441 7.08398 10.7441H6.68066C6.44141 10.7441 6.35938 10.8193 6.35938 11.0654V11.4619C6.35938 11.708 6.44141 11.7832 6.68066 11.7832ZM8.92285 11.7832H9.31934C9.56543 11.7832 9.64746 11.708 9.64746 11.4619V11.0654C9.64746 10.8193 9.56543 10.7441 9.31934 10.7441H8.92285C8.67676 10.7441 8.59473 10.8193 8.59473 11.0654V11.4619C8.59473 11.708 8.67676 11.7832 8.92285 11.7832Z"></path></svg></span>更新日</th></tr></thead><tbody><tr id="cb89f2f8-9786-448b-b284-d4d3301db93f"><td class="cell-title"><a href="Yuma%E2%80%99s%20Homepage%20c1741e0127f14a85921c138218705d6b/%E4%BD%9C%E3%81%A3%E3%81%9F%E3%82%82%E3%81%AE%20b981c4fbb3bd4b608d4d1e9d2bb6c856/%5B%E8%AC%9B%E7%BE%A9%E8%B3%87%E6%96%99%5D%20%E9%9B%BB%E5%AD%90%E7%89%A9%E6%80%A7%E5%B7%A5%E5%AD%A6%20cb89f2f89786448bb284d4d3301db93f.html">[講義資料] 電子物性工学</a></td><td class="cell-MqKG"><time>@June 5, 2023 11:50 PM</time></td><td class="cell-}pPK">[Lecture Notebook] Electronic condensed matter engineering</td><td class="cell-yCG]">66</td><td class="cell-rLjd"><span class="status-value select-value-color-blue"><div class="status-dot status-dot-color-blue"></div>更新中</span></td><td class="cell-`mZM"><span class="selected-value select-value-color-purple">工学</span><span class="selected-value select-value-color-purple">電子物性</span></td><td class="cell-buvO"><time>@June 4, 2024</time></td></tr><tr id="8e5ef087-c863-46e0-ba7a-3684f1fe78c0"><td class="cell-title"><a href="Yuma%E2%80%99s%20Homepage%20c1741e0127f14a85921c138218705d6b/%E4%BD%9C%E3%81%A3%E3%81%9F%E3%82%82%E3%81%AE%20b981c4fbb3bd4b608d4d1e9d2bb6c856/%5B%E8%AC%9B%E7%BE%A9%E8%B3%87%E6%96%99%5D%20%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E5%BC%8F%208e5ef087c86346e0ba7a3684f1fe78c0.html">[講義資料] 微分方程式</a></td><td class="cell-MqKG"><time>@March 17, 2023 9:50 PM</time></td><td class="cell-}pPK">[Lecture Notebook] Ordinary Differential Equations </td><td class="cell-yCG]">105</td><td class="cell-rLjd"><span class="status-value select-value-color-blue"><div class="status-dot status-dot-color-blue"></div>更新中</span></td><td class="cell-`mZM"><span class="selected-value select-value-color-default">微分方程式</span><span class="selected-value select-value-color-red">数学</span></td><td class="cell-buvO"><time>@May 30, 2024</time></td></tr><tr id="f36e49fb-6017-4cc2-b51f-bf7475520ad2"><td class="cell-title"><a href="Yuma%E2%80%99s%20Homepage%20c1741e0127f14a85921c138218705d6b/%E4%BD%9C%E3%81%A3%E3%81%9F%E3%82%82%E3%81%AE%20b981c4fbb3bd4b608d4d1e9d2bb6c856/%5B%E5%8F%A3%E9%A0%AD%E7%99%BA%E8%A1%A8%5D%E3%82%AF%E3%82%99%E3%83%A9%E3%83%95%E7%90%86%E8%AB%96%E3%81%AE%E5%BF%9C%E7%94%A8%E7%9A%84%E5%81%B4%E9%9D%A2%E3%81%AE%E6%A4%9C%E8%A8%8E%20f36e49fb60174cc2b51fbf7475520ad2.html">[口頭発表]グラフ理論の応用的側面の検討</a></td><td class="cell-MqKG"><time>@January 27, 2024 3:21 PM</time></td><td class="cell-}pPK"></td><td class="cell-yCG]">25</td><td class="cell-rLjd"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>完成済</span></td><td class="cell-`mZM"><span class="selected-value select-value-color-yellow">グラフ理論</span><span class="selected-value select-value-color-yellow">テンソルネットワーク</span><span class="selected-value select-value-color-red">数学</span></td><td class="cell-buvO"><time>@January 27, 2024</time></td></tr><tr id="d330e3d6-3568-45d5-83e1-101810e012b0"><td class="cell-title"><a href="Yuma%E2%80%99s%20Homepage%20c1741e0127f14a85921c138218705d6b/%E4%BD%9C%E3%81%A3%E3%81%9F%E3%82%82%E3%81%AE%20b981c4fbb3bd4b608d4d1e9d2bb6c856/%5B%E7%A4%BE%E4%BC%9A%E5%AE%9F%E8%A3%85PJ%5D%20Summary%20of%20Element%20Insight%20d330e3d6356845d583e1101810e012b0.html">[社会実装PJ] Summary of Element Insight</a></td><td class="cell-MqKG"><time>@January 27, 2024 2:43 PM</time></td><td class="cell-}pPK"></td><td class="cell-yCG]"></td><td class="cell-rLjd"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>完成済</span></td><td class="cell-`mZM"><span class="selected-value select-value-color-purple">工学</span><span class="selected-value select-value-color-purple">電子物性</span></td><td class="cell-buvO"><time>@January 23, 2024</time></td></tr><tr id="6b731f4a-3505-4008-a36d-db7f1ef4e421"><td class="cell-title"><a href="Yuma%E2%80%99s%20Homepage%20c1741e0127f14a85921c138218705d6b/%E4%BD%9C%E3%81%A3%E3%81%9F%E3%82%82%E3%81%AE%20b981c4fbb3bd4b608d4d1e9d2bb6c856/%5B%E8%AC%9B%E7%BE%A9%E8%B3%87%E6%96%99%5D%20%E3%83%98%E3%82%99%E3%82%AF%E3%83%88%E3%83%AB%E8%A7%A3%E6%9E%90%206b731f4a35054008a36ddb7f1ef4e421.html">[講義資料] ベクトル解析</a></td><td class="cell-MqKG"><time>@March 17, 2023 9:50 PM</time></td><td class="cell-}pPK">[Lecture Notebook] Vector Analysis</td><td class="cell-yCG]">110</td><td class="cell-rLjd"><span class="status-value select-value-color-blue"><div class="status-dot status-dot-color-blue"></div>更新中</span></td><td class="cell-`mZM"><span class="selected-value select-value-color-brown">ベクトル解析</span><span class="selected-value select-value-color-red">数学</span></td><td class="cell-buvO"><time>@October 9, 2023</time></td></tr><tr id="85f4b2a4-cf00-4855-bbee-8433b7473874"><td class="cell-title"><a href="Yuma%E2%80%99s%20Homepage%20c1741e0127f14a85921c138218705d6b/%E4%BD%9C%E3%81%A3%E3%81%9F%E3%82%82%E3%81%AE%20b981c4fbb3bd4b608d4d1e9d2bb6c856/%E3%82%AF%E3%82%99%E3%83%A9%E3%83%95%E7%90%86%E8%AB%96%E3%81%AB%E3%82%88%E3%82%8B%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E3%81%AE%E8%A7%A3%E6%9E%90%E6%89%8B%E6%B3%95%2085f4b2a4cf004855bbee8433b7473874.html">グラフ理論によるテンソルネットワークの解析手法</a></td><td class="cell-MqKG"><time>@August 17, 2023 9:41 AM</time></td><td class="cell-}pPK">Tensor Network Analysis Methods with Graph Theory</td><td class="cell-yCG]"></td><td class="cell-rLjd"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>完成済</span></td><td class="cell-`mZM"><span class="selected-value select-value-color-yellow">グラフ理論</span><span class="selected-value select-value-color-yellow">テンソルネットワーク</span><span class="selected-value select-value-color-purple">工学</span><span class="selected-value select-value-color-red">数学</span></td><td class="cell-buvO"><time>@August 10, 2023</time></td></tr><tr id="742bcfef-f6dc-4ebf-84d5-653ff1291049"><td class="cell-title"><a href="Yuma%E2%80%99s%20Homepage%20c1741e0127f14a85921c138218705d6b/%E4%BD%9C%E3%81%A3%E3%81%9F%E3%82%82%E3%81%AE%20b981c4fbb3bd4b608d4d1e9d2bb6c856/%5B%E7%A0%94%E7%A9%B6%5D%20%E3%82%AF%E3%82%99%E3%83%A9%E3%83%95%E7%90%86%E8%AB%96%E3%82%92%E7%94%A8%E3%81%84%E3%81%9F%E7%B7%9A%E5%9E%8B%E5%9B%9E%E8%B7%AF%E7%B6%B2%E8%A7%A3%E6%9E%90%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%20742bcfeff6dc4ebf84d5653ff1291049.html">[研究] グラフ理論を用いた線型回路網解析について</a></td><td class="cell-MqKG"><time>@May 24, 2023 11:48 PM</time></td><td class="cell-}pPK">Electric Circuit Analysis on Graph Theory</td><td class="cell-yCG]">26</td><td class="cell-rLjd"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>完成済</span></td><td class="cell-`mZM"><span class="selected-value select-value-color-yellow">グラフ理論</span><span class="selected-value select-value-color-red">数学</span></td><td class="cell-buvO"><time>@May 11, 2023</time></td></tr><tr id="d1127398-c7d6-4c7c-9793-aa012f7a6773"><td class="cell-title"><a href="Yuma%E2%80%99s%20Homepage%20c1741e0127f14a85921c138218705d6b/%E4%BD%9C%E3%81%A3%E3%81%9F%E3%82%82%E3%81%AE%20b981c4fbb3bd4b608d4d1e9d2bb6c856/%5B%E7%A0%94%E7%A9%B6%5D%20Mathematica%E3%81%AB%E3%82%88%E3%82%8B%E8%89%B2%E3%81%AE%E7%B4%B0%E5%88%86%E5%8C%96%20d1127398c7d64c7c9793aa012f7a6773.html">[研究] Mathematicaによる色の細分化</a></td><td class="cell-MqKG"><time>@May 24, 2023 11:56 PM</time></td><td class="cell-}pPK">Color subdivision with Mathematica </td><td class="cell-yCG]">5</td><td class="cell-rLjd"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>完成済</span></td><td class="cell-`mZM"><span class="selected-value select-value-color-orange">Mathematica</span><span class="selected-value select-value-color-purple">工学</span></td><td class="cell-buvO"><time>@May 6, 2023</time></td></tr><tr id="6835315f-a188-4202-826b-32d9b66662dd"><td class="cell-title"><a href="Yuma%E2%80%99s%20Homepage%20c1741e0127f14a85921c138218705d6b/%E4%BD%9C%E3%81%A3%E3%81%9F%E3%82%82%E3%81%AE%20b981c4fbb3bd4b608d4d1e9d2bb6c856/%5B%E8%AC%9B%E7%BE%A9%E8%B3%87%E6%96%99%5D%20%E6%98%A5%E6%9C%9F%E8%AC%9B%E7%BF%92%20%E5%B0%8F%E3%83%86%E3%82%B9%E3%83%88%E9%9B%86(%E5%BF%9C%E7%94%A8%E8%A7%A3%E6%9E%90%E5%88%86%E9%87%8E)%206835315fa1884202826b32d9b66662dd.html">[講義資料] 春期講習 小テスト集(応用解析分野)</a></td><td class="cell-MqKG"><time>@March 28, 2023 1:07 AM</time></td><td class="cell-}pPK"></td><td class="cell-yCG]">10</td><td class="cell-rLjd"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>完成済</span></td><td class="cell-`mZM"><span class="selected-value select-value-color-gray">Fourier解析</span><span class="selected-value select-value-color-brown">ベクトル解析</span><span class="selected-value select-value-color-default">微分方程式</span><span class="selected-value select-value-color-pink">応用物理</span><span class="selected-value select-value-color-red">数学</span><span class="selected-value select-value-color-blue">複素関数論</span></td><td class="cell-buvO"><time>@March 28, 2023</time></td></tr><tr id="ff0147d3-e338-44fc-9eb0-5141f29c0fac"><td class="cell-title"><a href="Yuma%E2%80%99s%20Homepage%20c1741e0127f14a85921c138218705d6b/%E4%BD%9C%E3%81%A3%E3%81%9F%E3%82%82%E3%81%AE%20b981c4fbb3bd4b608d4d1e9d2bb6c856/%5B%E8%AC%9B%E7%BE%A9%E8%B3%87%E6%96%99%5D%20Fourier%E8%A7%A3%E6%9E%90%20ff0147d3e33844fc9eb05141f29c0fac.html">[講義資料] Fourier解析</a></td><td class="cell-MqKG"><time>@March 26, 2023 6:45 PM</time></td><td class="cell-}pPK"></td><td class="cell-yCG]">40</td><td class="cell-rLjd"><span class="status-value select-value-color-blue"><div class="status-dot status-dot-color-blue"></div>更新中</span></td><td class="cell-`mZM"><span class="selected-value select-value-color-gray">Fourier解析</span><span class="selected-value select-value-color-red">数学</span></td><td class="cell-buvO"><time>@March 26, 2023</time></td></tr><tr id="1d6f6e43-34be-41fb-8d29-e5a5ac12df89"><td class="cell-title"><a href="Yuma%E2%80%99s%20Homepage%20c1741e0127f14a85921c138218705d6b/%E4%BD%9C%E3%81%A3%E3%81%9F%E3%82%82%E3%81%AE%20b981c4fbb3bd4b608d4d1e9d2bb6c856/%5B%E8%AC%9B%E7%BE%A9%E8%B3%87%E6%96%99%5D%20%E7%B7%9A%E5%BD%A2%E4%BB%A3%E6%95%B0%E5%AD%A6%201d6f6e4334be41fb8d29e5a5ac12df89.html">[講義資料] 線形代数学</a></td><td class="cell-MqKG"><time>@March 17, 2023 10:49 PM</time></td><td class="cell-}pPK"></td><td class="cell-yCG]">24</td><td class="cell-rLjd"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>完成済</span></td><td class="cell-`mZM"><span class="selected-value select-value-color-red">数学</span><span class="selected-value select-value-color-green">線形代数学</span></td><td class="cell-buvO"><time>@March 19, 2023</time></td></tr><tr id="56e7e0a2-132a-4dc3-8871-7fbda31c6f20"><td class="cell-title"><a href="Yuma%E2%80%99s%20Homepage%20c1741e0127f14a85921c138218705d6b/%E4%BD%9C%E3%81%A3%E3%81%9F%E3%82%82%E3%81%AE%20b981c4fbb3bd4b608d4d1e9d2bb6c856/%5B%E8%AC%9B%E7%BE%A9%E8%B3%87%E6%96%99%5D%20%E8%A4%87%E7%B4%A0%E9%96%A2%E6%95%B0%E8%AB%96%2056e7e0a2132a4dc388717fbda31c6f20.html">[講義資料] 複素関数論</a></td><td class="cell-MqKG"><time>@March 17, 2023 9:50 PM</time></td><td class="cell-}pPK">[Lecture Notebook] Complex Analysis</td><td class="cell-yCG]">57</td><td class="cell-rLjd"><span class="status-value select-value-color-blue"><div class="status-dot status-dot-color-blue"></div>更新中</span></td><td class="cell-`mZM"><span class="selected-value select-value-color-red">数学</span><span class="selected-value select-value-color-blue">複素関数論</span></td><td class="cell-buvO"><time>@March 17, 2023</time></td></tr><tr id="db52d6da-eaaf-4128-be5e-4068a506e35f"><td class="cell-title"><a href="Yuma%E2%80%99s%20Homepage%20c1741e0127f14a85921c138218705d6b/%E4%BD%9C%E3%81%A3%E3%81%9F%E3%82%82%E3%81%AE%20b981c4fbb3bd4b608d4d1e9d2bb6c856/%5B%E8%AC%9B%E7%BE%A9%E8%B3%87%E6%96%99%5D%20%E8%A7%A3%E6%9E%90%E5%AD%A6(%E5%BE%AE%E5%88%86%E7%A9%8D%E5%88%86%E5%AD%A6)%20db52d6daeaaf4128be5e4068a506e35f.html"> [講義資料] 解析学(微分積分学)</a></td><td class="cell-MqKG"><time>@March 19, 2023 11:07 PM</time></td><td class="cell-}pPK"></td><td class="cell-yCG]">178</td><td class="cell-rLjd"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>完成済</span></td><td class="cell-`mZM"><span class="selected-value select-value-color-red">数学</span><span class="selected-value select-value-color-orange">解析学</span></td><td class="cell-buvO"><time>@February 10, 2023</time></td></tr><tr id="940cb0cd-d3cb-44fd-838a-2849e64198a5"><td class="cell-title"><a href="Yuma%E2%80%99s%20Homepage%20c1741e0127f14a85921c138218705d6b/%E4%BD%9C%E3%81%A3%E3%81%9F%E3%82%82%E3%81%AE%20b981c4fbb3bd4b608d4d1e9d2bb6c856/%5B%E8%AC%9B%E7%BE%A9%E8%B3%87%E6%96%99%5D%20%E9%9B%BB%E5%AD%90%E5%9B%9E%E8%B7%AFII%E5%BE%8C%E6%9C%9F%20%E5%B0%8F%E3%83%86%E3%82%B9%E3%83%88%E9%9B%86%20940cb0cdd3cb44fd838a2849e64198a5.html">[講義資料] 電子回路II後期　小テスト集</a></td><td class="cell-MqKG"><time>@March 17, 2023 10:26 PM</time></td><td class="cell-}pPK"></td><td class="cell-yCG]">8</td><td class="cell-rLjd"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>完成済</span></td><td class="cell-`mZM"><span class="selected-value select-value-color-purple">工学</span><span class="selected-value select-value-color-yellow">電子回路</span></td><td class="cell-buvO"><time>@February 2, 2023</time></td></tr><tr id="579a02d5-a639-4db0-8293-f5fce6387fc0"><td class="cell-title"><a href="Yuma%E2%80%99s%20Homepage%20c1741e0127f14a85921c138218705d6b/%E4%BD%9C%E3%81%A3%E3%81%9F%E3%82%82%E3%81%AE%20b981c4fbb3bd4b608d4d1e9d2bb6c856/%5B%E6%A8%A1%E7%AF%84%E8%A7%A3%E7%AD%94%E9%9B%86%5D%20%E9%AB%98%E5%B0%82%E3%81%AE%E6%95%B0%E5%AD%A63%20%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%83%8F%E3%82%9A%E3%83%BC%E3%83%88%20579a02d5a6394db08293f5fce6387fc0.html">[模範解答集] 高専の数学3 微分方程式パート</a></td><td class="cell-MqKG"><time>@September 11, 2023 8:13 AM</time></td><td class="cell-}pPK"></td><td class="cell-yCG]"></td><td class="cell-rLjd"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>完成済</span></td><td class="cell-`mZM"><span class="selected-value select-value-color-default">微分方程式</span><span class="selected-value select-value-color-red">数学</span></td><td class="cell-buvO"></td></tr></tbody></table><br/><br/></div><h1 id="7551dcaf-6d7d-4c93-9f14-3729d690232e" class="block-color-orange_background"> 30 有償依頼 / For compensation</h1><figure id="fa859f2e-9b7a-4b44-8c60-50f2fc2c3811" class="link-to-page"><a href="Yuma%E2%80%99s%20Homepage%20c1741e0127f14a85921c138218705d6b/%5B%E5%AE%B6%E5%BA%AD%E6%95%99%E5%B8%AB%E4%BE%9D%E9%A0%BC%5D%20%E5%8F%97%E4%BB%98%E4%B8%AD%20fa859f2e9b7a4b448c6050f2fc2c3811.html">[家庭教師依頼] 受付中</a></figure><figure id="e8d16931-8da6-4661-bc59-2c4e950f99cd" class="link-to-page"><a href="Yuma%E2%80%99s%20Homepage%20c1741e0127f14a85921c138218705d6b/%5B%E5%A4%96%E9%83%A8%5D%20LaTeX%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E4%BE%9D%E9%A0%BC%20e8d169318da64661bc592c4e950f99cd.html">[外部] LaTeXに関する依頼</a></figure><h1 id="8ac8839a-b045-4c51-97de-b2112cbade48" class="block-color-orange_background"> 40 過去に担当した講義 / Lectures</h1><p id="f3eaf8b8-6867-4c03-9103-2e6f32e8e399" class="">※ (補)は補講的な位置付けです．</p><p id="5620bcd5-720a-4613-8bc9-1066c503bffb" class="">※ (テ)は1科目1.5時間〜4時間程度のテスト対策講義です．</p><p id="12943b34-5de4-46f0-9b22-314bae24150b" class="">※ (編)は編入対策のため家庭教師として実施した講義です．</p><p id="76764ac9-3581-4bc5-adab-9903c665cc81" class="">※ 「4年春」は3年学年末〜4年始業までの期間です．</p><h2 id="6dc0ee88-f4f9-4924-842d-7cf6a76e588d" class="block-color-yellow_background"> 2024 - current</h2><ul id="7f042440-ce38-401a-b556-ab20ec08e835" class="bulleted-list"><li style="list-style-type:disc">(編) Maxwellから学ぶ電磁気学 / Electromagnetism with Maxwell equations (超難関編入レベル)</li></ul><ul id="85a2d85c-18e2-4ebe-8bdc-5fea5a6069d2" class="bulleted-list"><li style="list-style-type:disc">(編) 発展的な線型代数学 / Advanced Linear Algebra (超難関編入レベル)</li></ul><h2 id="719c6527-882a-4f61-a881-a0c9bebd423c" class="block-color-yellow_background"> 2023</h2><ul id="b70e6f6e-3295-4197-9489-692e4a8670fb" class="bulleted-list"><li style="list-style-type:disc">(編) 量子力学の基礎 / Basic Quantum Mechanics (大学教養レベル)</li></ul><ul id="04618cf3-9b50-40fd-aef2-3803706003f2" class="bulleted-list"><li style="list-style-type:disc">(編) 力学の基礎 / Basic Kinetics (大学教養レベル)</li></ul><ul id="ddec9da3-dea7-4b7d-a016-79c86df9700a" class="bulleted-list"><li style="list-style-type:disc">(編) 熱学の基礎 / Basic Thermodynamics (大学教養レベル)</li></ul><ul id="333a7bc5-2652-44fa-9398-cc23f71b2619" class="bulleted-list"><li style="list-style-type:disc">(編) 物理のためのベクトル解析 / Vector Analysis for physics</li></ul><ul id="81a15fc8-6000-4ccb-8c97-31765bba570b" class="bulleted-list"><li style="list-style-type:disc">(補) 電気数学I（ベクトル解析） (4年後期) / Vector Analysis (2023 3rdQ)</li></ul><ul id="e8fce240-d7d1-4de4-8b7e-2392dfc2d319" class="bulleted-list"><li style="list-style-type:disc">(補) 電気回路IV (4年後期) / Electric Circuit 4 (2023 3rdQ)</li></ul><ul id="b03aebef-1b81-4ac0-aa1d-77433c9ec5da" class="bulleted-list"><li style="list-style-type:disc">(補) 解析II (3年後期) / Analysis 2 (2023 3rdQ)</li></ul><ul id="54ba550f-2ed8-4b74-bfc9-2b3ddb673e82" class="bulleted-list"><li style="list-style-type:disc">(補) 電子回路II (3年後期) / Electronic Circuit 2 (2023 3rdQ)</li></ul><ul id="b10382b1-aa64-4916-abcf-b28fa0c5791c" class="bulleted-list"><li style="list-style-type:disc">(テ、補) ディジタル信号処理 (4年前期末) / Digital Signal Processing (2023 2ndQ)</li></ul><ul id="ae2bee26-bd1e-4008-8bc9-f1cd8a42c649" class="bulleted-list"><li style="list-style-type:disc">(テ) 微分方程式 (4年前期末) / Ordinary Differential Equations (2023 2ndQ)</li></ul><ul id="3f332eb5-d31f-47d9-81c5-023e34528806" class="bulleted-list"><li style="list-style-type:disc">(テ) 電子物性工学 (4年前期末) / Condensed Matter Engineering (2023 2ndQ)</li></ul><ul id="6b036c35-c444-41ff-94c7-be0cfb3e6b2a" class="bulleted-list"><li style="list-style-type:disc">(テ) 電気数学II（フーリエ解析） (4年前期末) / Fourier Analysis (2023 2ndQ)</li></ul><ul id="93cfcb6c-d88a-48e9-ba29-35d6444a3226" class="bulleted-list"><li style="list-style-type:disc">(テ、補) 応用物理 (4年前期末) / Applied Physics (2023 2ndQ)</li></ul><ul id="874b5351-c05f-4980-9f00-20fd5fbc746b" class="bulleted-list"><li style="list-style-type:disc">(補) 微分積分I (2年夏) / Calculus 1 (2023 summer for sophomore)</li></ul><ul id="5a37c926-0ee6-400b-8aaa-5d78e2d4ab5e" class="bulleted-list"><li style="list-style-type:disc">(補) 解析I (3年夏) / Analysis 1 (2023 summer for junior)</li></ul><ul id="bd4b5b77-5140-444f-9e0d-dc94135bfbbd" class="bulleted-list"><li style="list-style-type:disc">(補) 応用物理 (4年夏) / Applied Physics (2023 summer for senior)</li></ul><ul id="0e756c60-4131-4aba-a7e4-4b10fca4ffdd" class="bulleted-list"><li style="list-style-type:disc">(補) 電子物性工学 (4年夏) / Condensed Matter Engineering (2023 summer for senior)</li></ul><ul id="fd22ddf4-aa06-4a2f-a572-1f49902678cb" class="bulleted-list"><li style="list-style-type:disc">応用数学（複素解析）(4年春) / Applied Mathematics (2023 spring for senior)</li></ul><ul id="37f68c15-c507-4fd3-b634-80e8700d387a" class="bulleted-list"><li style="list-style-type:disc">電気数学I（ベクトル解析）(4年春) / Vector Analysis (2023 spring for senior)</li></ul><ul id="bfab5300-5fa7-4115-9945-ad73ab29f6e4" class="bulleted-list"><li style="list-style-type:disc">電気数学II（フーリエ解析）(4年春) / Fourier Analysis (2023 spring for senior)</li></ul><ul id="779fda32-f9f4-4d93-8432-a1f101203d24" class="bulleted-list"><li style="list-style-type:disc">微分方程式 (4年春) / Ordinary Differential Equations (2023 spring for senior)</li></ul><ul id="5adcc00c-2f40-497f-b966-ac2683019a79" class="bulleted-list"><li style="list-style-type:disc">応用物理 (4年春) / Applied Physics (2023 spring for senior)</li></ul><h2 id="bcb1876f-20b7-4341-89e0-3b2504f92799" class="block-color-yellow_background"> 2022 (summer)</h2><ul id="44f12df6-e94d-42fb-9063-730d32cf71c2" class="bulleted-list"><li style="list-style-type:disc">(補) 解析I (3年夏) / Analysis 1 (2022 summer for junior)</li></ul><ul id="0cb41ae6-c6b6-4f70-bd7f-7aa5bbab1357" class="bulleted-list"><li style="list-style-type:disc">(補) 電磁気学I (3年夏) / Electromagnetism 1 (2022 summer for junior)</li></ul><ul id="c8d28d67-1592-4683-9c8e-31bd31d130f9" class="bulleted-list"><li style="list-style-type:disc">(補) 電子回路I (3年夏) / Electronic Circuit 1 (2022 summer for junior)</li></ul><h2 id="48b5e4d9-9dbe-46e7-bd13-7c7a1df882c1" class="block-color-yellow_background"> 2021 (spring)</h2><ul id="28a3c47a-0b85-414c-930e-84cf15981503" class="bulleted-list"><li style="list-style-type:disc">(補) 物理I、II (2年春) / Physics 1 and 2 (2021 spring for sophomore)</li></ul><ul id="9b9dd02a-b426-41a8-a12c-77367dfce9c8" class="bulleted-list"><li style="list-style-type:disc">(補) 微分積分I、II (2年春) / Calculus 1 and 2 (2021 spring for sophomore)</li></ul><p id="3548b4f6-ed7e-4c83-a770-cc9e5dfefd7c" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"><hr/><details open="" style="padding-top:1em"><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Page comments</summary><div class="indented"><div><ul class="toggle"><li><div><span class="user" style="padding:0.2em"><span class="icon text-icon user-icon"><span class="user-icon-inner">Y</span></span><span><b>Yuma K.</b> <time style="font-size:0.8em">May 25, 2024, 1:34 AM</time></span></span></div><div style="padding:0.2em">このサイトに掲載してあるpdfについて，二次配布は厳禁です．</div><div style="padding:0.3em"></div></li></ul></div><hr/></div></details></span></body></html>
